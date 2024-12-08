@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "880183966639",
+    "project_id": "tretanz-task",
+    "storage_bucket": "tretanz-task.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880183966639:android:35b714f8368de0d3a28d5a",
+        "android_client_info": {
+          "package_name": "co.in.tretanz.tretanz_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880183966639-or03gougcr464kgcn6bic86bn7575tup.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.in.tretanz.tretanz_task",
+            "certificate_hash": "0a1a14a366c6c4413e98c2e61c080a048f1103d3"
+          }
+        },
+        {
+          "client_id": "880183966639-3o334o9tt44shls1jkdaisnus3ub4b16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0lvQJEOs03UVv5nmbW993AquxZE7I7Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880183966639-3o334o9tt44shls1jkdaisnus3ub4b16.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "880183966639-4o8j834ph14rspstfe4o8po1ti9kdel9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.in.tretanz.tretanzTask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
