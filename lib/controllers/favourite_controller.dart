@@ -6,6 +6,7 @@ class FavouriteController extends GetxController{
 
   List<Map<String,dynamic>> favouriteList = [];
 
+  // Method to fetch the user's favorite places from Firestore
   getFavoritePlaces() async {
     try {
       final user = FirebaseAuth.instance.currentUser;

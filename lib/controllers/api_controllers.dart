@@ -7,6 +7,7 @@ import '../app_statics/app_const.dart';
 class ApiControllers {
   final Dio _dio = Dio();
 
+  // Fetches nearby places based on a search query, latitude, longitude, and optional radius.
   Future<List<PlaceModel>> getNearbyPlaces({
     required String searchQuery,
     required double latitude,
@@ -52,7 +53,7 @@ class ApiControllers {
     return ''; // Return empty if no photo is available
   }
 
-
+  // Fetches place suggestions based on user input and location, useful for autocomplete.
   Future<List<Map<String, dynamic>>> getPlaceSuggestions({
     required String input,
     String sessionToken = '',
@@ -60,6 +61,7 @@ class ApiControllers {
     required double longitude,
   }) async {
     try {
+      // Make the API request to fetch place suggestions.
       final response = await _dio.get(AppConst.autocompleteUrl, queryParameters: {
         'key': AppConst.googleApiKey,
         'location': '$latitude,$longitude',
@@ -84,6 +86,8 @@ class ApiControllers {
     }
   }
 
+  // Fetches detailed information about a specific place using its place ID.
+
   Future<Map<String, dynamic>> getPlaceDetails(String placeId) async {
     try {
       final response = await _dio.get(
@@ -95,10 +99,7 @@ class ApiControllers {
         },
       );
 
-      AppMethods().printWrapped('sdfjskidfjald;jsa;dsfj');
-      // AppMethods().printWrapped(response.data?['result']);
       if (response.data?['result'] != null) {
-        AppMethods().printWrapped(response.data!['result'].toString());
         return response.data['result'];
       }
       return {};

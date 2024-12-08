@@ -12,6 +12,8 @@ class UserController extends GetxController{
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
+  // Method to sign in the user with Google
+
   Future<User?> signInWithGoogle() async {
     try {
       _googleSignIn.disconnect();
@@ -50,6 +52,7 @@ class UserController extends GetxController{
     return null;
   }
 
+  // Method to fetch the current user's data from Firestore
   getUserData() async {
     try {
       final user = FirebaseAuth.instance.currentUser;
@@ -65,6 +68,7 @@ class UserController extends GetxController{
     update();
   }
 
+  // Method to log out the current user
   logout() async {
     await FirebaseAuth.instance.signOut();
   }
